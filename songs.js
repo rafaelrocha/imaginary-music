@@ -1,4 +1,4 @@
-[
+var songs = [
 	{
 		"name": "Lá Vem o Negão",
 		"author": "Zelão",
@@ -100,7 +100,7 @@
 		"name": "Chupa Que É De Uva",
 		"author": "Aviões do Forró",
 		"snippet": [
-			"a sua boca eu viro fruta",
+			"Na sua boca eu viro fruta",
 			"Chupa que é de uva!",
 			"Chupa! Chupa!",
 			"Chupa que é de uva!"
@@ -202,4 +202,4 @@
 			"Mexe a cabeça e dança Kuduro"
 		]
 	}
-]
+];

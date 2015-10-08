@@ -6,41 +6,60 @@
 				margin: 0; 
 				padding: 0; 
 			}
-
 			.container { 
 				margin-right: auto; 
 				margin-left: auto; 
-				width: 600px;
+				width: 700px;
 				margin-top: 150px;
 			}
-
 			blockquote {
 				text-align: left;
 				font-family: "Helvetica", "Times New Roman", Times, serif;
 			}
-
-			blockquote p {
-				font-size: 36px;
+			.snippet {
+				font-size: 30px;
+				line-height: 48px;
 			}
-
-			blockquote footer {
+			.name-and-author {
 				font-style: italic;
+				text-align: right;
 			}
 		</style>
+
 	</head>
 
 
 	<body>
 		<div class="container">
 			<blockquote>
-			  	<p>
-				  	Quando Deus te desenhou<br>
-					Ele tava namorando<br>
-					Na beira do mar<br>
-					Na beira do mar, do amor<br>
+			  	<p class="snippet">
 				</p>
-			  	<footer><cite>Desenho de Deus</cite> - Armandinho</footer>
+			  	<footer class="name-and-author"></footer>
 			</blockquote>
 		</div>
+
+		<script type="text/javascript" src="songs.js"></script>
+		<script type="text/javascript">
+			function ready(fn) {
+			  if (document.readyState != 'loading'){
+			    fn();
+			  } else {
+			    document.addEventListener('DOMContentLoaded', fn);
+			  }
+			}
+
+			ready(function() {
+				var randomSongIndex = Math.floor(Math.random() * songs.length);
+				var randomSong = songs[randomSongIndex];
+
+				var songSnippetEl = document.getElementsByClassName('snippet')[0];
+				var songNameAndAuthorEl = document.getElementsByClassName('name-and-author')[0];
+
+				songSnippetEl.innerHTML =  randomSong.snippet.join("<br>");
+				songNameAndAuthorEl.innerHTML =  randomSong.name + ' - ' + randomSong.author;
+
+			});
+
+		</script>
 	</body>
 </html>
